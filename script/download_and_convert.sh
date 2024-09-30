@@ -8,7 +8,7 @@ fi
 youtube_url="$1"
 output_filename="$2"
 
-youtube-dl -f bestaudio --extract-audio --audio-format mp3 --output "$output_filename" "$youtube_url"
+./yt-dlp_macos -f bestaudio --extract-audio --audio-format mp3 --output "$output_filename" "$youtube_url"
 
 if [ $? -eq 0 ]; then
     echo "Video downloaded and converted to MP3 successfully."

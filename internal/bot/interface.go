@@ -7,10 +7,10 @@ import (
 )
 
 type Bot struct {
-	bot    *telego.Bot
+	*telego.Bot
 	script *script.Script
 }
 
 func New(bot *telego.Bot, script *script.Script) *Bot {
-	return &Bot{bot: bot, script: script}
+	return &Bot{Bot: bot, script: script}
 }
